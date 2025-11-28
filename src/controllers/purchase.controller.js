@@ -5,7 +5,7 @@ const yF = new YahooFinance();
 
 // Get the stock.
 async function getStockController(req, res) {
-  const { stock } = req.body;
+  const { stock } = req.query;
   const result = await yF.quoteSummary(stock);
 
   const data = {
